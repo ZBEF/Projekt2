@@ -1,6 +1,8 @@
 // Frontend/src/services/api.js
 
-const API_BASE = "/api";
+const API_BASE = import.meta.env.VITE_API_URL;
+
+
 
 // Hilfsfunktion für robustes Lesen (auch bei 204 No Content)
 async function readJsonSafe(res) {
