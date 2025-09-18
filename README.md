@@ -111,6 +111,8 @@ npm install
 npm run dev
 → Läuft auf: http://localhost:5173
 
+---
+
 🌐 Deployment
 Frontend (Vercel)
 Root Directory: Frontend
@@ -128,9 +130,13 @@ Start Command: npm start
 
 Environment Variable: MONGODB_URI
 
+---
+
 👤 Autor
 Fabian Z.
 Projektarbeit an der TEKO im 6. Semester (Internetdienste).
+
+---
 
 📜 Lizenz
 Dieses Projekt ist ausschließlich für Ausbildungszwecke gedacht.
