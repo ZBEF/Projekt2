@@ -49,11 +49,17 @@ Das Projekt besteht aus:
 ## ⚙️ Environment Variables
 
 ### Backend (`Backend/.env`)
-MONGODB_URI=<Deine MongoDB-Verbindungs-URL>  
-PORT=5000  
+MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
+PORT=5000
+
+shell
+Code kopieren
 
 ### Frontend (`Frontend/.env`)
-VITE_API_URL=https://projekt2-cvgr.onrender.com/api  
+VITE_API_URL=https://projekt2-cvgr.onrender.com/api
+
+yaml
+Code kopieren
 
 ---
 
@@ -68,19 +74,10 @@ Jeder kann direkt über die Vercel-URL Reservierungen erstellen, ansehen, änder
 ---
 
 ### Für Entwickler
-Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind **Environment Variables** nötig:
+Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind **Environment Variables** nötig (siehe oben).  
 
-#### Backend (`Backend/.env`)
-```env
-MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
-PORT=5000
-
-#### Frontend (`Frontend/.env`)
-VITE_API_URL=https://projekt2-cvgr.onrender.com/api
-
-
-➡️ Es werden keine weiteren Zugangsdaten benötigt.
-Nur die MongoDB-Verbindungs-URL (für das Backend) muss gültig gesetzt sein.
+➡️ Es werden keine weiteren Zugangsdaten benötigt.  
+Nur die **MongoDB-Verbindungs-URL** (für das Backend) muss gültig gesetzt sein.
 
 ---
 
@@ -93,45 +90,47 @@ Nur die MongoDB-Verbindungs-URL (für das Backend) muss gültig gesetzt sein.
 ### Schritte
 
 1. **Repository klonen**  
-   git clone https://github.com/ZBEF/Projekt2.git  
-   cd Projekt2  
+   ```bash
+   git clone https://github.com/ZBEF/Projekt2.git
+   cd Projekt2
+Backend installieren & starten
 
-2. **Backend installieren & starten**  
-   cd Backend  
-   npm install  
-   npm start  
+bash
+Code kopieren
+cd Backend
+npm install
+npm start
+→ Läuft auf: http://localhost:5000/api
 
-   → Läuft auf: http://localhost:5000/api  
+Frontend installieren & starten
 
-3. **Frontend installieren & starten**  
-   cd ../Frontend  
-   npm install  
-   npm run dev  
+bash
+Code kopieren
+cd ../Frontend
+npm install
+npm run dev
+→ Läuft auf: http://localhost:5173
 
-   → Läuft auf: http://localhost:5173  
+🌐 Deployment
+Frontend (Vercel)
+Root Directory: Frontend
 
----
+Build Command: npm run build
 
-## 🌐 Deployment
+Output Directory: dist
 
-### Frontend (Vercel)
-- Root Directory: `Frontend`  
-- Build Command: `npm run build`  
-- Output Directory: `dist`  
-- Environment Variable: `VITE_API_URL` → Render-URL  
+Environment Variable: VITE_API_URL → Render-URL
 
-### Backend (Render)
-- Root Directory: `Backend`  
-- Start Command: `npm start`  
-- Environment Variable: `MONGODB_URI`  
+Backend (Render)
+Root Directory: Backend
 
----
+Start Command: npm start
 
-## 👤 Autor
-**Fabian Z.**  
-Projektarbeit an der TEKO im 6. Semester (Internetdienste).  
+Environment Variable: MONGODB_URI
 
----
+👤 Autor
+Fabian Z.
+Projektarbeit an der TEKO im 6. Semester (Internetdienste).
 
-## 📜 Lizenz
-Dieses Projekt ist ausschließlich für **Ausbildungszwecke** gedacht.  
+📜 Lizenz
+Dieses Projekt ist ausschließlich für Ausbildungszwecke gedacht.
