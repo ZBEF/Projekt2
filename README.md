@@ -69,92 +69,96 @@ Projekt2/
 │
 └── README.md              # Projektdokumentation
 
-## ⚙️ Environment Variables
+⚙️ Environment Variables
+Backend (Backend/.env)
 
-### Backend (`Backend/.env`)
-MONGODB_URI=<Deine MongoDB-Verbindungs-URL>  
-PORT=5000  
-
-### Frontend (`Frontend/.env`)
-VITE_API_URL=https://projekt2-cvgr.onrender.com/api  
-
----
-
-## 🔑 Zugangsdaten
-
-### Für Nutzer
-Die Live-Anwendung ist **ohne Login oder Zugangsdaten** nutzbar.  
-Jeder kann direkt über die Vercel-URL Reservierungen erstellen, ansehen, ändern und löschen.
-
-👉 Live-URL: [https://projekt2-gamma.vercel.app](https://projekt2-gamma.vercel.app)
-
----
-
-### Für Entwickler
-Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind **Environment Variables** nötig:
-
-#### Backend (`Backend/.env`)
-```env
 MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
 PORT=5000
 
-#### Frontend (`Frontend/.env`)
+Frontend (Frontend/.env)
+
+VITE_API_URL=https://projekt2-cvgr.onrender.com/api
+
+🔑 Zugangsdaten
+Für Nutzer
+
+Die Live-Anwendung ist ohne Login oder Zugangsdaten nutzbar.
+Jeder kann direkt über die Vercel-URL Reservierungen erstellen, ansehen, ändern und löschen.
+
+👉 Live-URL: https://projekt2-gamma.vercel.app
+
+Für Entwickler
+
+Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind Environment Variables nötig:
+
+Backend (Backend/.env)
+MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
+PORT=5000
+
+Frontend (Frontend/.env)
 VITE_API_URL=https://projekt2-cvgr.onrender.com/api
 
 
 ➡️ Es werden keine weiteren Zugangsdaten benötigt.
 Nur die MongoDB-Verbindungs-URL (für das Backend) muss gültig gesetzt sein.
 
----
+💻 Installation & Lokaler Start
+Voraussetzungen
 
-## 💻 Installation & Lokaler Start
+Node.js (>= 18)
 
-### Voraussetzungen
-- Node.js (>= 18)  
-- MongoDB Datenbank (lokal oder in der Cloud, z. B. MongoDB Atlas)  
+MongoDB Datenbank (lokal oder in der Cloud, z. B. MongoDB Atlas)
 
-### Schritte
+Schritte
 
-1. **Repository klonen**  
-   git clone https://github.com/ZBEF/Projekt2.git  
-   cd Projekt2  
+Repository klonen
 
-2. **Backend installieren & starten**  
-   cd Backend  
-   npm install  
-   npm start  
+git clone https://github.com/ZBEF/Projekt2.git
+cd Projekt2
 
-   → Läuft auf: http://localhost:5000/api  
 
-3. **Frontend installieren & starten**  
-   cd ../Frontend  
-   npm install  
-   npm run dev  
+Backend installieren & starten
 
-   → Läuft auf: http://localhost:5173  
+cd Backend
+npm install
+npm start
 
----
 
-## 🌐 Deployment
+→ Läuft auf: http://localhost:5000/api
 
-### Frontend (Vercel)
-- Root Directory: `Frontend`  
-- Build Command: `npm run build`  
-- Output Directory: `dist`  
-- Environment Variable: `VITE_API_URL` → Render-URL  
+Frontend installieren & starten
 
-### Backend (Render)
-- Root Directory: `Backend`  
-- Start Command: `npm start`  
-- Environment Variable: `MONGODB_URI`  
+cd ../Frontend
+npm install
+npm run dev
 
----
 
-## 👤 Autor
-**Fabian Z.**  
-Projektarbeit an der TEKO im 6. Semester (Internetdienste).  
+→ Läuft auf: http://localhost:5173
 
----
+🌐 Deployment
+Frontend (Vercel)
 
-## 📜 Lizenz
-Dieses Projekt ist ausschließlich für **Ausbildungszwecke** gedacht.  
+Root Directory: Frontend
+
+Build Command: npm run build
+
+Output Directory: dist
+
+Environment Variable: VITE_API_URL → Render-URL
+
+Backend (Render)
+
+Root Directory: Backend
+
+Start Command: npm start
+
+Environment Variable: MONGODB_URI
+
+👤 Autor
+
+Fabian Z.
+Projektarbeit an der TEKO im 6. Semester (Internetdienste).
+
+📜 Lizenz
+
+Dieses Projekt ist ausschließlich für Ausbildungszwecke gedacht.
