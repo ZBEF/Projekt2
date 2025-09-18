@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { fetchReservations } from "../services/api"; // <-- API-Funktion importieren
 
 const Tables = () => {
   const [reservations, setReservations] = useState([]);
@@ -10,12 +11,16 @@ const Tables = () => {
   const allTables = [1, 2, 3, 4, 5, 6, 7, 8];
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/reservations")
-      .then((res) => res.json())
-      .then((data) => setReservations(data))
-      .catch((err) =>
-        console.error("Fehler beim Laden der Reservierungen:", err)
-      );
+    const loadReservations = async () => {
+      try {
+        const data = await fetchReservations(); // <-- API-Aufruf über service
+        setReservations(data);
+      } catch (err) {
+        console.error("Fehler beim Laden:", err.message);
+        setReservations([]);
+      }
+    };
+    loadReservations();
   }, []);
 
   const getReservationsForTable = (tableNumber) => {

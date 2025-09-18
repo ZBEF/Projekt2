@@ -10,7 +10,7 @@ const App = () => {
   return (
     <Router>
       <div style={{ textAlign: "center", padding: "10px", background: "#f0f0f0" }}>
-        <strong>MahlZeit App 🚀 – Test-Deployment</strong>
+        <strong>MahlZeit</strong>
       </div>
       <Header />
       <main className="py-4">
