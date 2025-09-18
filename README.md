@@ -46,98 +46,73 @@ Das Projekt besteht aus:
 
 ---
 
-## 📂 Ordnerstruktur
+## ⚙️ Environment Variables
 
-```bash
-Projekt2/
-│── Backend/               # Node.js + Express + MongoDB
-│   ├── models/            # Datenbank-Modelle
-│   ├── routes/            # API-Routen
-│   ├── server.js          # Einstiegspunkt für Backend
-│   └── .env               # MONGODB_URI, PORT
-│
-│── Frontend/              # React + Vite
-│   ├── public/            # Statische Dateien
-│   ├── src/
-│   │   ├── components/    # Header, UI-Komponenten
-│   │   ├── pages/         # ReservationDashboard, Tables, Home
-│   │   ├── services/      # api.js (API-Aufrufe)
-│   │   ├── App.jsx        # Haupt-App-Komponente
-│   │   └── main.jsx       # Einstiegspunkt React
-│   ├── .env               # VITE_API_URL
-│   └── vite.config.js     # Vite-Konfiguration
-│
-└── README.md              # Projektdokumentation
-
-⚙️ Environment Variables
-Backend (Backend/.env)
-
+### Backend (`Backend/.env`)
 MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
 PORT=5000
 
-Frontend (Frontend/.env)
+shell
+Code kopieren
 
+### Frontend (`Frontend/.env`)
 VITE_API_URL=https://projekt2-cvgr.onrender.com/api
 
-🔑 Zugangsdaten
-Für Nutzer
+yaml
+Code kopieren
 
-Die Live-Anwendung ist ohne Login oder Zugangsdaten nutzbar.
+---
+
+## 🔑 Zugangsdaten
+
+### Für Nutzer
+Die Live-Anwendung ist **ohne Login oder Zugangsdaten** nutzbar.  
 Jeder kann direkt über die Vercel-URL Reservierungen erstellen, ansehen, ändern und löschen.
 
-👉 Live-URL: https://projekt2-gamma.vercel.app
+👉 Live-URL: [https://projekt2-gamma.vercel.app](https://projekt2-gamma.vercel.app)
 
-Für Entwickler
+---
 
-Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind Environment Variables nötig:
+### Für Entwickler
+Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind **Environment Variables** nötig (siehe oben).  
 
-Backend (Backend/.env)
-MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
-PORT=5000
+➡️ Es werden keine weiteren Zugangsdaten benötigt.  
+Nur die **MongoDB-Verbindungs-URL** (für das Backend) muss gültig gesetzt sein.
 
-Frontend (Frontend/.env)
-VITE_API_URL=https://projekt2-cvgr.onrender.com/api
+---
 
+## 💻 Installation & Lokaler Start
 
-➡️ Es werden keine weiteren Zugangsdaten benötigt.
-Nur die MongoDB-Verbindungs-URL (für das Backend) muss gültig gesetzt sein.
+### Voraussetzungen
+- Node.js (>= 18)  
+- MongoDB Datenbank (lokal oder in der Cloud, z. B. MongoDB Atlas)  
 
-💻 Installation & Lokaler Start
-Voraussetzungen
+### Schritte
 
-Node.js (>= 18)
-
-MongoDB Datenbank (lokal oder in der Cloud, z. B. MongoDB Atlas)
-
-Schritte
-
-Repository klonen
-
-git clone https://github.com/ZBEF/Projekt2.git
-cd Projekt2
-
-
+1. **Repository klonen**  
+   ```bash
+   git clone https://github.com/ZBEF/Projekt2.git
+   cd Projekt2
 Backend installieren & starten
 
+bash
+Code kopieren
 cd Backend
 npm install
 npm start
-
-
 → Läuft auf: http://localhost:5000/api
 
 Frontend installieren & starten
 
+bash
+Code kopieren
 cd ../Frontend
 npm install
 npm run dev
-
-
 → Läuft auf: http://localhost:5173
 
 🌐 Deployment
 Frontend (Vercel)
-
 Root Directory: Frontend
 
 Build Command: npm run build
@@ -147,7 +122,6 @@ Output Directory: dist
 Environment Variable: VITE_API_URL → Render-URL
 
 Backend (Render)
-
 Root Directory: Backend
 
 Start Command: npm start
@@ -155,10 +129,8 @@ Start Command: npm start
 Environment Variable: MONGODB_URI
 
 👤 Autor
-
 Fabian Z.
 Projektarbeit an der TEKO im 6. Semester (Internetdienste).
 
 📜 Lizenz
-
 Dieses Projekt ist ausschließlich für Ausbildungszwecke gedacht.
