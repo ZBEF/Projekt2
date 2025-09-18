@@ -46,45 +46,14 @@ Das Projekt besteht aus:
 
 ---
 
-## 📂 Ordnerstruktur
-
-```bash
-Projekt2/
-│── Backend/               # Node.js + Express + MongoDB
-│   ├── models/            # Datenbank-Modelle
-│   ├── routes/            # API-Routen
-│   ├── server.js          # Einstiegspunkt für Backend
-│   └── .env               # MONGODB_URI, PORT
-│
-│── Frontend/              # React + Vite
-│   ├── public/            # Statische Dateien
-│   ├── src/
-│   │   ├── components/    # Header, UI-Komponenten
-│   │   ├── pages/         # ReservationDashboard, Tables, Home
-│   │   ├── services/      # api.js (API-Aufrufe)
-│   │   ├── App.jsx        # Haupt-App-Komponente
-│   │   └── main.jsx       # Einstiegspunkt React
-│   ├── .env               # VITE_API_URL
-│   └── vite.config.js     # Vite-Konfiguration
-│
-└── README.md              # Projektdokumentation
-
----
-
 ## ⚙️ Environment Variables
 
 ### Backend (`Backend/.env`)
-MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
-PORT=5000
-
-shell
-Code kopieren
+MONGODB_URI=<Deine MongoDB-Verbindungs-URL>  
+PORT=5000  
 
 ### Frontend (`Frontend/.env`)
-VITE_API_URL=https://projekt2-cvgr.onrender.com/api
-
-yaml
-Code kopieren
+VITE_API_URL=https://projekt2-cvgr.onrender.com/api  
 
 ---
 
@@ -99,10 +68,19 @@ Jeder kann direkt über die Vercel-URL Reservierungen erstellen, ansehen, änder
 ---
 
 ### Für Entwickler
-Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind **Environment Variables** nötig (siehe oben).  
+Damit die Anwendung lokal gestartet oder erneut deployed werden kann, sind **Environment Variables** nötig:
 
-➡️ Es werden keine weiteren Zugangsdaten benötigt.  
-Nur die **MongoDB-Verbindungs-URL** (für das Backend) muss gültig gesetzt sein.
+#### Backend (`Backend/.env`)
+```env
+MONGODB_URI=<Deine MongoDB-Verbindungs-URL>
+PORT=5000
+
+#### Frontend (`Frontend/.env`)
+VITE_API_URL=https://projekt2-cvgr.onrender.com/api
+
+
+➡️ Es werden keine weiteren Zugangsdaten benötigt.
+Nur die MongoDB-Verbindungs-URL (für das Backend) muss gültig gesetzt sein.
 
 ---
 
@@ -115,47 +93,45 @@ Nur die **MongoDB-Verbindungs-URL** (für das Backend) muss gültig gesetzt sein
 ### Schritte
 
 1. **Repository klonen**  
-   ```bash
-   git clone https://github.com/ZBEF/Projekt2.git
-   cd Projekt2
-Backend installieren & starten
+   git clone https://github.com/ZBEF/Projekt2.git  
+   cd Projekt2  
 
-bash
-Code kopieren
-cd Backend
-npm install
-npm start
-→ Läuft auf: http://localhost:5000/api
+2. **Backend installieren & starten**  
+   cd Backend  
+   npm install  
+   npm start  
 
-Frontend installieren & starten
+   → Läuft auf: http://localhost:5000/api  
 
-bash
-Code kopieren
-cd ../Frontend
-npm install
-npm run dev
-→ Läuft auf: http://localhost:5173
+3. **Frontend installieren & starten**  
+   cd ../Frontend  
+   npm install  
+   npm run dev  
 
-🌐 Deployment
-Frontend (Vercel)
-Root Directory: Frontend
+   → Läuft auf: http://localhost:5173  
 
-Build Command: npm run build
+---
 
-Output Directory: dist
+## 🌐 Deployment
 
-Environment Variable: VITE_API_URL → Render-URL
+### Frontend (Vercel)
+- Root Directory: `Frontend`  
+- Build Command: `npm run build`  
+- Output Directory: `dist`  
+- Environment Variable: `VITE_API_URL` → Render-URL  
 
-Backend (Render)
-Root Directory: Backend
+### Backend (Render)
+- Root Directory: `Backend`  
+- Start Command: `npm start`  
+- Environment Variable: `MONGODB_URI`  
 
-Start Command: npm start
+---
 
-Environment Variable: MONGODB_URI
+## 👤 Autor
+**Fabian Z.**  
+Projektarbeit an der TEKO im 6. Semester (Internetdienste).  
 
-👤 Autor
-Fabian Z.
-Projektarbeit an der TEKO im 6. Semester (Internetdienste).
+---
 
-📜 Lizenz
-Dieses Projekt ist ausschließlich für Ausbildungszwecke gedacht.
+## 📜 Lizenz
+Dieses Projekt ist ausschließlich für **Ausbildungszwecke** gedacht.  
