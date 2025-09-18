@@ -46,6 +46,31 @@ Das Projekt besteht aus:
 
 ---
 
+## 📂 Ordnerstruktur
+
+```bash
+Projekt2/
+│── Backend/               # Node.js + Express + MongoDB
+│   ├── models/            # Datenbank-Modelle
+│   ├── routes/            # API-Routen
+│   ├── server.js          # Einstiegspunkt für Backend
+│   └── .env               # MONGODB_URI, PORT
+│
+│── Frontend/              # React + Vite
+│   ├── public/            # Statische Dateien
+│   ├── src/
+│   │   ├── components/    # Header, UI-Komponenten
+│   │   ├── pages/         # ReservationDashboard, Tables, Home
+│   │   ├── services/      # api.js (API-Aufrufe)
+│   │   ├── App.jsx        # Haupt-App-Komponente
+│   │   └── main.jsx       # Einstiegspunkt React
+│   ├── .env               # VITE_API_URL
+│   └── vite.config.js     # Vite-Konfiguration
+│
+└── README.md              # Projektdokumentation
+
+---
+
 ## ⚙️ Environment Variables
 
 ### Backend (`Backend/.env`)
